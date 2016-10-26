@@ -1,0 +1,10 @@
+#!/bin/bash
+
+
+if [[ -d ~/.terminfo ]];then
+	mv ~/.terminfo{,_bak}
+	echo "change alternate screen buffer on"
+elif [[ -d ~/.terminfo_bak ]];then
+	mv ~/.terminfo{_bak,}
+	echo "change alternate screen buffer off"
+fi
